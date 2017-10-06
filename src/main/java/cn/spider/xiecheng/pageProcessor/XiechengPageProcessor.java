@@ -22,6 +22,7 @@ import java.util.Map;
  *  1.不同站的问题，比如，选择北京站，潍坊站，他显示的数量不同的，好多个城市又有许多重复的。
  *  2.addHeader("Cookie","")现在是自己加，能不能让机器自己去。
  *  3.同一个资源，服务器有多种显示方式，所以你的爬取方式必须涵盖所有的方式。
+ *  4.一个完整资源（product）需要在多次请求中，可以用到request.setExtra(Map)来把第一次获取的信息放进request里，在爬取了这个request时，再取出来，与剩下的资源整合成一个资源。
  */
 public class XiechengPageProcessor implements PageProcessor {
 
